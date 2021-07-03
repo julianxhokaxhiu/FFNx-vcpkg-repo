@@ -1,0 +1,27 @@
+{
+  "name": "vcpkg-repo",
+  "version": "1.0.0",
+  "description": "My custom vcpkg repository of ports not present officially",
+  "scripts": {
+    "postinstall": "node .src/post-install.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/julianxhokaxhiu/vcpkg-repo.git"
+  },
+  "keywords": [
+    "vcpkg",
+    "repository"
+  ],
+  "author": "Julian Xhokaxhiu <https://julianxhokaxhiu.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/julianxhokaxhiu/vcpkg-repo/issues"
+  },
+  "homepage": "https://github.com/julianxhokaxhiu/vcpkg-repo#readme",
+  "devDependencies": {
+    "glob": "^7.1.7",
+    "mkdirp": "^1.0.4",
+    "simple-git": "^2.40.0"
+  }
+}

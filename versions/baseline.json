@@ -23,6 +23,10 @@
     "vgmstream": {
       "baseline": "1.0.0",
       "port-version": 0
+    },
+    "openpsf": {
+      "baseline": "1.3.0",
+      "port-version": 0
     }
   }
 }

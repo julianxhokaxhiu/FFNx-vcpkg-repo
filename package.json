@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "My custom vcpkg repository of ports not present officially",
   "scripts": {
-    "postinstall": "node .src/post-install.js"
+    "postinstall": "node .scripts/post-install.js"
   },
   "repository": {
     "type": "git",

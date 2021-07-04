@@ -4,14 +4,14 @@
 # (bimg requires bx source for building)
 
 vcpkg_from_github(OUT_SOURCE_PATH BX_SOURCE_DIR
-    REPO "bkaradzic/bx"
+    REPO "julianxhokaxhiu/bx"
     HEAD_REF master
     REF 51f25ba638b9cb35eb2ac078f842a4bed0746d56
     SHA512 917dd942bead000df551cbabbede81fa22846ceb92bf07dffe8e52cc3d1b91b5ae2b710938f586a7f77fa80b1f1e477ad8c8065bab9fd596ffdc4f0ab1e6fe7e
 )
 
 vcpkg_from_github(OUT_SOURCE_PATH SOURCE_DIR
-    REPO "bkaradzic/bimg"
+    REPO "julianxhokaxhiu/bimg"
     HEAD_REF master
     REF 8355d36befc90c1db82fca8e54f38bfb7eeb3530
     SHA512 f6bbe22a0636f11906de229b397e27e3e87bd8a68f364ce6381ce62e787a395b2311c02e8efd2ece9f55b3211f52eb5693a3758e9f29e3bc5d1b1229560e8a79

@@ -5,7 +5,7 @@ vcpkg_check_linkage(ONLY_STATIC_LIBRARY)
 # Download source
 
 vcpkg_from_github(OUT_SOURCE_PATH SOURCE_DIR
-    REPO "bkaradzic/bx"
+    REPO "julianxhokaxhiu/bx"
     HEAD_REF master
     REF 51f25ba638b9cb35eb2ac078f842a4bed0746d56
     SHA512 917dd942bead000df551cbabbede81fa22846ceb92bf07dffe8e52cc3d1b91b5ae2b710938f586a7f77fa80b1f1e477ad8c8065bab9fd596ffdc4f0ab1e6fe7e

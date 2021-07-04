@@ -4,24 +4,24 @@
 # (bgfx requires bx and bimg source for building)
 
 vcpkg_from_github(OUT_SOURCE_PATH BX_SOURCE_DIR
-    REPO "bkaradzic/bx"
+    REPO "julianxhokaxhiu/bx"
     HEAD_REF master
     REF 51f25ba638b9cb35eb2ac078f842a4bed0746d56
     SHA512 917dd942bead000df551cbabbede81fa22846ceb92bf07dffe8e52cc3d1b91b5ae2b710938f586a7f77fa80b1f1e477ad8c8065bab9fd596ffdc4f0ab1e6fe7e
 )
 
 vcpkg_from_github(OUT_SOURCE_PATH BIMG_SOURCE_DIR
-    REPO "bkaradzic/bimg"
+    REPO "julianxhokaxhiu/bimg"
     HEAD_REF master
     REF 8355d36befc90c1db82fca8e54f38bfb7eeb3530
     SHA512 f6bbe22a0636f11906de229b397e27e3e87bd8a68f364ce6381ce62e787a395b2311c02e8efd2ece9f55b3211f52eb5693a3758e9f29e3bc5d1b1229560e8a79
 )
 
 vcpkg_from_github(OUT_SOURCE_PATH SOURCE_DIR
-    REPO "bkaradzic/bgfx"
+    REPO "julianxhokaxhiu/bgfx"
     HEAD_REF master
-    REF d95a643603e5b1dbe847d622ffb5860765ee7f62
-    SHA512 6cd92b92f35f313ec3756753486327208ad82aa1f9d467b96da14152256296c39d7069d52ef201d4b99f8042aa23ed872edd00285a339173985cac709c846d2b
+    REF 4c3e617831e13c0b4f1bd7e78587e016cf667651
+    SHA512 da82f0868cde7debdfab5bab1920eae53e58da741c601e1381079fb8ef8380c917912a5a67600c3d8bf36e91cafb43d8bf89825236ab3b93abf2e78207ce4470
 )
 
 # Move bx source inside bgfx source tree
@@ -135,6 +135,8 @@ else()
         LICENSE_SUBPATH "LICENSE"
         INCLUDES_SUBPATH "include"
     )
+    # Install shader include file
+    file(INSTALL "${SOURCE_DIR}/src/bgfx_shader.sh" DESTINATION "${CURRENT_PACKAGES_DIR}/include/bgfx" )
     # Remove redundant files
     foreach(a bx bimg bimg_decode bimg_encode)
         foreach(b Debug Release)

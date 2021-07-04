@@ -43,5 +43,5 @@ vcpkg_install_msbuild(
 )
 
 # Copy dependencies headers
-file(INSTALL "${SOURCE_DIR}/highly_experimental/include" DESTINATION "${CURRENT_PACKAGES_DIR}/include")
-file(INSTALL "${SOURCE_DIR}/psflib/include" DESTINATION "${CURRENT_PACKAGES_DIR}/include")
+file(INSTALL "${SOURCE_DIR}/highly_experimental/include/highly_experimental" DESTINATION "${CURRENT_PACKAGES_DIR}/include")
+file(INSTALL "${SOURCE_DIR}/psflib/include/psflib" DESTINATION "${CURRENT_PACKAGES_DIR}/include")

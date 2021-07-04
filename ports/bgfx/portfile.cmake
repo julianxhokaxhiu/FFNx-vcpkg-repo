@@ -24,19 +24,18 @@ vcpkg_from_github(OUT_SOURCE_PATH SOURCE_DIR
     SHA512 6cd92b92f35f313ec3756753486327208ad82aa1f9d467b96da14152256296c39d7069d52ef201d4b99f8042aa23ed872edd00285a339173985cac709c846d2b
 )
 
-# Copy bx source inside bgfx source tree
-file(GLOB BX_FILES LIST_DIRECTORIES true "${BX_SOURCE_DIR}/*")
-file(COPY ${BX_FILES} DESTINATION "${SOURCE_DIR}/.bx")
+# Move bx source inside bgfx source tree
 set(BX_DIR ${SOURCE_DIR}/.bx)
+file(RENAME ${BX_SOURCE_DIR} "${BX_DIR}")
 set(ENV{BX_DIR} ${BX_DIR})
 
-# Copy bimg source inside bgfx source tree
-file(GLOB BIMG_FILES LIST_DIRECTORIES true "${BIMG_SOURCE_DIR}/*")
-file(COPY ${BIMG_FILES} DESTINATION "${SOURCE_DIR}/.bimg")
+# Move bimg source inside bgfx source tree
 set(BIMG_DIR ${SOURCE_DIR}/.bimg)
+file(RENAME ${BIMG_SOURCE_DIR} "${BIMG_DIR}")
 set(ENV{BIMG_DIR} ${BIMG_DIR})
 
 # Set up GENie (custom project generator)
+set(GENIE_OPTIONS --with-tools)
 
 if(VCPKG_CRT_LINKAGE STREQUAL dynamic)
     set(GENIE_OPTIONS ${GENIE_OPTIONS} --with-dynamic-runtime)

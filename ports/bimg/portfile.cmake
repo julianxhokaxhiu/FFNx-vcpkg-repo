@@ -17,10 +17,9 @@ vcpkg_from_github(OUT_SOURCE_PATH SOURCE_DIR
     SHA512 f6bbe22a0636f11906de229b397e27e3e87bd8a68f364ce6381ce62e787a395b2311c02e8efd2ece9f55b3211f52eb5693a3758e9f29e3bc5d1b1229560e8a79
 )
 
-# Copy bx source inside bimg source tree
-file(GLOB BX_FILES LIST_DIRECTORIES true "${BX_SOURCE_DIR}/*")
-file(COPY ${BX_FILES} DESTINATION "${SOURCE_DIR}/.bx")
+# Move bx source inside bgfx source tree
 set(BX_DIR ${SOURCE_DIR}/.bx)
+file(RENAME ${BX_SOURCE_DIR} "${BX_DIR}")
 set(ENV{BX_DIR} ${BX_DIR})
 
 # Set up GENie (custom project generator)

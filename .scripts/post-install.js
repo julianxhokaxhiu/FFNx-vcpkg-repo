@@ -32,12 +32,9 @@ async function run()
               portVersionPath = `versions/${portName.substring(0, 1).toLowerCase()}-/${portName}.json`
 
         // baseline
-        if (!versionsBaseline.default[portName])
-        {
-          versionsBaseline.default[portName] = {
-            baseline: port.version,
-            "port-version": port["port-version"] || 0
-          }
+        versionsBaseline.default[portName] = {
+          baseline: port.version,
+          "port-version": port["port-version"] || 0
         }
 
         // versions

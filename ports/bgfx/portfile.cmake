@@ -34,6 +34,9 @@ set(BIMG_DIR ${SOURCE_DIR}/.bimg)
 file(RENAME ${BIMG_SOURCE_DIR} "${BIMG_DIR}")
 set(ENV{BIMG_DIR} ${BIMG_DIR})
 
+# Set custom BGFX configuration
+set(ENV{BGFX_CONFIG} "DEBUG=1:PREFER_DISCRETE_GPU=0:DYNAMIC_INDEX_BUFFER_SIZE=10485760:DYNAMIC_VERTEX_BUFFER_SIZE=31457280")
+
 # Set up GENie (custom project generator)
 set(GENIE_OPTIONS --with-tools)
 
